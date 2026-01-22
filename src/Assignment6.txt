@@ -1,0 +1,126 @@
+ ALGORITHM ANALYSIS FOR PROBLEMS 1-5
+
+ PROBLEM 1: COMMON SUBSEQUENCE
+
+ Time Complexity
+ - Big-O: O(m × n)
+ - Big-Ω: Ω(m × n)
+
+ Explanation:
+ The algorithm uses dynamic programming with nested loops. The outer loop runs m times
+ (length of text1), and the inner loop runs n times (length of text2). Each iteration
+ performs constant-time operations (character comparison and array access). Therefore,
+ the total number of operations is proportional to m × n.
+
+ Since we must fill every cell in the dp table regardless of input characteristics,
+ the best-case and worst-case are the same, making both Big-O and Big-Ω equal to Θ(m × n).
+
+ Space Complexity
+ - Big-O: O(m × n)
+ - Big-Ω: Ω(m × n)
+
+ Explanation:
+ The algorithm allocates a 2D array dp of size (m+1) × (n+1), which dominates the space
+ usage. The character arrays A and B add O(m + n) space, but this is dominated by the
+ O(m × n) dp table. Therefore, the space complexity is Θ(m × n).
+
+
+ PROBLEM 2: LONGEST COMMON SUBSTRING
+
+ Time Complexity
+ - Big-O: O(m × n)
+ - Big-Ω: Ω(m × n)
+
+ Explanation:
+ Similar to Problem 1, this algorithm uses nested loops iterating m × n times.
+ Each iteration performs:
+ - Character comparison: O(1)
+ - DP table update: O(1)
+ - Max length check: O(1)
+
+ The final character extraction loop runs at most O(min(m, n)) times, which is
+ dominated by O(m × n).
+
+ The algorithm must examine every position pair to determine the longest common
+ substring, so both bounds are tight at Θ(m × n).
+
+ Space Complexity
+ - Big-O: O(m × n)
+ - Big-Ω: Ω(m × n)
+
+ Explanation:
+ The dp table of size (m+1) × (n+1) requires O(m × n) space. The result character
+ array is at most O(min(m, n)) in size, which is dominated by the dp table.
+ Total space complexity is Θ(m × n).
+
+
+ PROBLEM 3: NOT FIBONACCI
+
+ Time Complexity
+ - Big-O: O(n)
+ - Big-Ω: Ω(n)
+
+ Explanation:
+ The algorithm contains a single for loop that runs from i = 2 to i < n, executing
+ (n - 2) iterations. Each iteration performs:
+ - Arithmetic calculation: O(1)
+ - Print operation: O(1)
+ - Variable updates: O(1)
+
+ Space Complexity
+ - Big-O: O(1)
+ - Big-Ω: Ω(1)
+
+ Explanation:
+ The algorithm uses only a constant amount of extra space:
+ - Three integer variables: prev2, prev1, current
+ - Loop counter: i
+
+ PROBLEM 4: FIND POSITION IN NOT FIBONACCI SEQUENCE
+
+ Time Complexity
+ - Big-O: O(log target)
+ - Big-Ω: Ω(1)
+
+ Explanation:
+
+ Big-O Analysis:
+ The while loop continues until either:
+ 1. current == target (exact match found)
+ 2. current > target (overshot the target)
+ 3. position > 100 (safety break)
+
+ Space Complexity
+ - Big-O: O(1)
+ - Big-Ω: Ω(1)
+
+ Explanation:
+ The algorithm uses only a fixed number of variables:
+ - prev2, prev1, current, position
+
+
+
+ PROBLEM 5: REMOVE ELEMENTS
+
+ Time Complexity
+ - Big-O: O(n)
+ - Big-Ω: Ω(n)
+
+ Explanation:
+ The algorithm uses a single for loop that iterates through all n elements of the
+ array exactly once. Each iteration performs:
+ - Comparison: O(1)
+ - Conditional assignment: O(1)
+ - Counter increment: O(1)
+
+ Space Complexity
+ - Big-O: O(1)
+ - Big-Ω: Ω(1)
+
+ Explanation:
+ The algorithm performs an in-place modification of the input array using the
+ two-pointer technique (implicit pointers k and i). Only a constant amount of
+ extra space is used:
+ - Counter variable k
+ - Loop variable i
+
