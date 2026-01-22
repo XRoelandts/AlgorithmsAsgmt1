@@ -4,6 +4,9 @@ public class CommonSubstring {
         String s1 = "gears of war";
         String s2 = "History of warriors";
 
+        System.out.println("Input: text1 = \"" + s1 + "\", text2 = \"" + s2 + "\"");
+        System.out.println("Output: \"" + longestCommonSubstring(s1, s2) + "\"");
+        System.out.println();
 
     }
 
