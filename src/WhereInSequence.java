@@ -1,15 +1,15 @@
 public class WhereInSequence {
 
     public static void main(String[] args){
-        long target = 1763;
+        int target = 1763;
         System.out.println("Input: " + target);
         System.out.println("Output: " + findPositionInNotFibonacci(target));
         System.out.println();
     }
 
-    public static int findPositionInNotFibonacci(long target) {
-        long prev2 = 0;
-        long prev1 = 2;
+    public static int findPositionInNotFibonacci(int target) {
+        int prev2 = 0;
+        int prev1 = 2;
         int position = 1;
 
         if (target <= 0){
@@ -22,7 +22,7 @@ public class WhereInSequence {
 
         while (true) {
 
-            long current = (3 * prev1 + 4 * prev2) / 2;
+            int current = (3 * prev1 + 4 * prev2) / 2;
 
             if (current == target) {
                 return position + 1;

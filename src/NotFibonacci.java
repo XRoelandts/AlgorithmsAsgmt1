@@ -15,8 +15,8 @@ public class NotFibonacci {
             return;
         }
 
-        long prev2 = 0;
-        long prev1 = 2;
+        int prev2 = 0;
+        int prev1 = 2;
 
         if (n >= 1) {
             System.out.print(prev2);
@@ -26,7 +26,7 @@ public class NotFibonacci {
         }
 
         for (int i = 2; i < n; i++) {
-            long current = (long) (1.5 * prev1 + 2.0 * prev2);
+            int current = (int) (1.5 * prev1 + 2.0 * prev2);
 
             System.out.print(", " + current);
 
